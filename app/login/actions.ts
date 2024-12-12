@@ -10,19 +10,22 @@ export async function login(formData: FormData) {
 
   // type-casting here for convenience
   // in practice, you should validate your inputs
-  const data = {
+  const d = {
     email: formData.get('email') as string,
     password: formData.get('password') as string,
   }
 
-  const { error } = await supabase.auth.signInWithPassword(data)
+  const { data, error } = await supabase.auth.signInWithPassword(d);
+
+  console.log(data, error)
 
   if (error) {
     redirect('/error')
   }
 
-  revalidatePath('/', 'layout')
-  redirect('/')
+//   revalidatePath('/', 'layout')
+//   redirect('/')
+
 }
 
 export async function signup(formData: FormData) {
