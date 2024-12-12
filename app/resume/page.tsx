@@ -205,10 +205,11 @@ export default function Resume() {
 
         <Grid2 className={'resume-header'} size={8}>
           <Grid2 size={12} className={"mb-30"}>
-            <Text type={'h1'} className="fw-300">{resume.name}</Text>
+            <Text type={'h1'} className="fw-300 mb-0">{resume.name}</Text>
             <Text type={'p'} className="color-dark-4 fs-14 fw-300 dark:color-light-4">{resume.location}</Text>
             <Text type={'p'} className="color-dark-4 fs-14 fw-300 dark:color-light-4"><a href={`mailto:${resume.email}`}>{resume.email}</a></Text>
             <Text type={'p'} className="color-dark-4 fs-14 fw-300 dark:color-light-4"><a href={`phone:${resume.phone}`}>{resume.phone}</a></Text>
+            &nbsp;
             <Text type={'p'} className="color-dark-1 fs-16 fw-300 dark:color-light-1 mb-30">{resume.bio}</Text>
           </Grid2>
           <Grid2 size={12} sx={{
@@ -245,13 +246,13 @@ export default function Resume() {
                   if (pos.title === position) {
                     return (
                       <Paper elevation={0} key={pos.title} className='resume-paper bg-light-1 dark:bg-dark-1 dark:text-light-1'>
-                        <Text type={'p'} className="color-dark-4 fs-1 dark:color-light-2 fs-14">{pos.title} ({pos.start} - {pos.end})</Text><br />
+                        <Text type={'p'} className="color-dark-4 fs-1 dark:color-light-2 fs-14 fw-600">{pos.title} ({pos.start} - {pos.end})</Text><br />
                         {pos.skills?.map((skill) => {
                           return (
                             <Chip key={skill} label={skill} className="dark:bg-light-2" style={{ margin: '0 5px 5px 0' }} />
                           )
                         })}
-                        <ul>
+                        <ul key={pos.title}>
                           {pos.notes.map((note) => (
                             <>
                               {/* {i !== 0 && (<li style={{padding: '3px'}} className="dark:text-light" key={note}>-</li>)} */}
