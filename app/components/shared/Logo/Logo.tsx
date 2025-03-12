@@ -14,3 +14,7 @@ const Logo: React.FC = () => {
 };
 
 export default Logo;
+
+const LTDA = '';
+
+LTDA
