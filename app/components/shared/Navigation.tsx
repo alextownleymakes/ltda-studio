@@ -4,11 +4,11 @@ import { Grid2 } from "@mui/material";
 
 const Navigation: React.FC = () => {
 
-    const GridLink = ({ href }: { href: string }) => {
+    const GridLink = ({ href, title }: { href: string, title?: string }) => {
         return (
             <Grid2 style={{ padding: '10px', fontWeight: '600' }}>
-                <Link className="nav-link" href={`/${href}`}>
-                    {href}
+                <Link target={title && '_blank'} className="nav-link" href={`/${href}`}>
+                    {title ?? href}
                 </Link>
             </Grid2>
         )
@@ -21,7 +21,7 @@ const Navigation: React.FC = () => {
             <GridLink href="contact" />
             <GridLink href="blog" />
             <GridLink href="projects" />
-            <GridLink href="resume" />
+            <GridLink title="resume" href="alex-ivy-townley-full-stack-engineer-resume.pdf" />
         </Grid2>
     )
 }
