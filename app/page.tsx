@@ -12,8 +12,8 @@ export default function Home() {
       </h1>
       <div className={styles.about}>
         <p className={styles.blurb}>
-          i&rsquo;m a full stack software engineer, career musician, theoretical physics researcher, 
-          I&rsquo;m an adept learner and love projects that challenge me to push beyond my current skillset.
+          i&rsquo;m a full stack software engineer, career musician, theoretical physics researcher, serial hobbyist,
+          i&rsquo;m an adept learner and am excited by projects that improve the loves of other humans and challenge me to push beyond my current skillset.
         </p>
         <nav className={styles.links}>
           <a className={styles.link} href={PROJECTS_HREF}>
