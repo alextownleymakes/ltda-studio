@@ -6,8 +6,15 @@ export const metadata: Metadata = {
   title: 'Projects · Alex Ivy-Townley',
 };
 
-// Each game is its own deployment, shown under /games/<name> (next.config.ts).
+// Games with their own site link there; the rest are their own deployments,
+// shown under /games/<name> (next.config.ts).
 const PROJECTS = [
+  {
+    name: 'Verse vs Verse',
+    href: 'https://versevsverse.app',
+    image: '/projects/verse-vs-verse.jpg',
+    about: 'A multiplayer freestyle rap battle game. Rap over a beat, land on the rhyming words, and battle your friends online.',
+  },
   {
     name: 'Bubbles',
     href: '/games/bubbles',
