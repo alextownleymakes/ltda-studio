@@ -1,4 +1,5 @@
 import Image from 'next/image';
+import Link from 'next/link';
 import type { Metadata } from 'next';
 import styles from './page.module.scss';
 
@@ -26,7 +27,7 @@ const PROJECTS = [
 export default function Projects() {
   return (
     <main className={styles.page}>
-      <a className={styles.home} href="/">&larr; Alex Ivy-Townley</a>
+      <Link className={styles.home} href="/">&larr; Alex Ivy-Townley</Link>
       <h1 className={styles.title}>Projects</h1>
       <ul className={styles.grid}>
         {PROJECTS.map((project) => (

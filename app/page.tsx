@@ -1,3 +1,4 @@
+import Link from 'next/link';
 import styles from './page.module.scss';
 
 // Where the two links go. The résumé is a file in public/.
@@ -16,9 +17,9 @@ export default function Home() {
           i&rsquo;m an adept learner and am excited by projects that improve the loves of other humans and challenge me to push beyond my current skillset.
         </p>
         <nav className={styles.links}>
-          <a className={styles.link} href={PROJECTS_HREF}>
+          <Link className={styles.link} href={PROJECTS_HREF}>
             Projects <span aria-hidden="true">&rarr;</span>
-          </a>
+          </Link>
           <a className={styles.link} href={RESUME_HREF} download>
             Download résumé <span aria-hidden="true">&darr;</span>
           </a>
