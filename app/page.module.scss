@@ -1,0 +1,80 @@
+.page {
+  min-height: 100vh;
+  min-height: 100svh;
+  display: grid;
+  grid-template-columns: auto minmax(0, 34ch);
+  justify-content: space-between;
+  align-items: center;
+  gap: clamp(32px, 6vw, 120px);
+  padding: clamp(24px, 6vw, 112px);
+  background: #0a0a0a;
+  color: #ededed;
+}
+
+.name {
+  margin: 0;
+  font-family: var(--font-geist-sans), system-ui, sans-serif;
+  font-weight: 800;
+  font-size: clamp(44px, 6.4vw, 124px);
+  line-height: 0.82;
+  letter-spacing: -0.035em;
+  text-transform: uppercase;
+  white-space: nowrap;   // IVY-TOWNLEY stays one line
+}
+
+.about {
+  max-width: 34ch;
+  font-family: var(--font-geist-mono), ui-monospace, monospace;
+}
+
+.blurb {
+  margin: 0;
+  font-size: clamp(16px, 1.35vw, 21px);
+  line-height: 1.55;
+  color: #bdbdbd;
+}
+
+.links {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 12px;
+  margin-top: 36px;
+}
+
+// !important: globals.css sets every link's color with !important
+.link {
+  display: inline-flex;
+  gap: 10px;
+  font-size: 14px;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: #ededed !important;
+  text-decoration: none;
+  border-bottom: 1px solid rgba(237, 237, 237, 0.3);
+  padding-bottom: 3px;
+  transition: border-color 0.15s ease;
+
+  &:hover {
+    color: #ededed !important;
+    border-color: #ededed;
+  }
+
+  &:focus-visible {
+    outline: 2px solid #ededed;
+    outline-offset: 4px;
+  }
+}
+
+@media (max-width: 760px) {
+  .page {
+    grid-template-columns: minmax(0, 1fr);
+    justify-content: stretch;
+    align-content: center;
+    gap: 40px;
+  }
+
+  .name {
+    font-size: 11.5vw;
+  }
+}

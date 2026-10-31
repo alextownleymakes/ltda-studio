@@ -26,8 +26,8 @@ const geistMono = localFont({
 });
 
 export const metadata: Metadata = {
-  title: "LTDA STUDIO",
-  description: "alex ivy-townley, full stack engineer",
+  title: "Alex Ivy-Townley",
+  description: "Full stack software engineer, musician, and theoretical physics researcher.",
 };
 
 export default function RootLayout({

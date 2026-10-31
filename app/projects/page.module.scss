@@ -1,0 +1,85 @@
+.page {
+  min-height: 100vh;
+  min-height: 100svh;
+  padding: clamp(24px, 6vw, 112px);
+  background: #0a0a0a;
+  color: #ededed;
+  font-family: var(--font-geist-mono), ui-monospace, monospace;
+}
+
+// !important on link colors: globals.css sets every link's color with !important
+.home {
+  font-size: 13px;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: #8a8a8a !important;
+  text-decoration: none;
+
+  &:hover { color: #ededed !important; }
+
+  &:focus-visible {
+    outline: 2px solid #ededed;
+    outline-offset: 4px;
+  }
+}
+
+.title {
+  margin: 28px 0 clamp(32px, 5vw, 64px);
+  font-family: var(--font-geist-sans), system-ui, sans-serif;
+  font-weight: 800;
+  font-size: clamp(44px, 6.4vw, 124px);
+  line-height: 0.82;
+  letter-spacing: -0.035em;
+  text-transform: uppercase;
+}
+
+.grid {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(min(100%, 300px), 1fr));
+  gap: clamp(24px, 3vw, 40px);
+}
+
+.card {
+  display: block;
+  color: inherit !important;
+  text-decoration: none;
+
+  &:hover { color: inherit !important; }
+
+  &:focus-visible {
+    outline: 2px solid #ededed;
+    outline-offset: 6px;
+  }
+}
+
+.shot {
+  display: block;
+  width: 100%;
+  height: auto;
+  aspect-ratio: 8 / 5;
+  object-fit: cover;
+  border: 1px solid rgba(237, 237, 237, 0.12);
+  transition: border-color 0.15s ease;
+
+  .card:hover & { border-color: rgba(237, 237, 237, 0.5); }
+}
+
+.name {
+  display: flex;
+  justify-content: space-between;
+  margin: 16px 0 6px;
+  font-size: 14px;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: #ededed;
+}
+
+.about {
+  margin: 0;
+  font-size: 14px;
+  line-height: 1.5;
+  color: #9a9a9a;
+}

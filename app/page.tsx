@@ -1,25 +1,29 @@
-import Text from "./components/shared/Text";
+import styles from './page.module.scss';
+
+// Where the two links go. The résumé is a file in public/.
+const PROJECTS_HREF = '/projects';
+const RESUME_HREF = '/alex-ivy-townley-full-stack-engineer-resume.pdf';
 
 export default function Home() {
-
   return (
-    <main>
-      <Text type={'h1'} style={{ width: '100%', textAlign: 'center' }}>alex ivy-townley</Text>
-      {/* <div id='home-container'>
-      
-      </div> */}
-      <div id='home-container'>
-        <Text type={'p'} style={{ width: '100%', textAlign: 'center' }} className="color-dark-1 dark:color-light-1 bg-color-light-1-transparent dark:bg-color-dark-1-transparent">i am a full stack engineer with a love for react.</Text>
-        <Text type={'p'} style={{ width: '100%', textAlign: 'center' }} className="color-dark-1 dark:color-light-1 bg-color-light-1-transparent dark:bg-color-dark-1-transparent">i have been building for the web for over 20 years,</Text>
-        <Text type={'p'} style={{ width: '100%', textAlign: 'center' }} className="color-dark-1 dark:color-light-1 bg-color-light-1-transparent dark:bg-color-dark-1-transparent"> and have worked as a software engineer for the last 5.</Text>
-        <Text type={'p'} style={{ width: '100%', textAlign: 'center' }} className="color-dark-1 dark:color-light-1 bg-color-light-1-transparent dark:bg-color-dark-1-transparent">my favorite projects are those that involve music, art, and technology.</Text>
-        <br /><br />
-        <Text type={'p'} style={{ width: '100%', textAlign: 'center' }} className="color-dark-1 dark:color-light-1 bg-color-light-1-transparent dark:bg-color-dark-1-transparent fw-600">i am currently looking for work!</Text>
-        <Text type={'p'} style={{ width: '100%', textAlign: 'center' }} className="color-dark-1 dark:color-light-1 bg-color-light-1-transparent dark:bg-color-dark-1-transparent">get my <a style={{ textDecoration: 'underline' }} className={''} href="/alex-ivy-townley-full-stack-engineer-resume.pdf" target="_blank">resume</a></Text>
-        <Text type={'p'} style={{ width: '100%', textAlign: 'center' }} className="color-dark-1 dark:color-light-1 bg-color-light-1-transparent dark:bg-color-dark-1-transparent"><a style={{ textDecoration: 'underline' }} className={''} href="/contact">reach out</a></Text>
+    <main className={styles.page}>
+      <h1 className={styles.name}>
+        Alex<br />Ivy-Townley
+      </h1>
+      <div className={styles.about}>
+        <p className={styles.blurb}>
+          i&rsquo;m a full stack software engineer, career musician, theoretical physics researcher, 
+          I&rsquo;m an adept learner and love projects that challenge me to push beyond my current skillset.
+        </p>
+        <nav className={styles.links}>
+          <a className={styles.link} href={PROJECTS_HREF}>
+            Projects <span aria-hidden="true">&rarr;</span>
+          </a>
+          <a className={styles.link} href={RESUME_HREF} download>
+            Download résumé <span aria-hidden="true">&darr;</span>
+          </a>
+        </nav>
       </div>
-      <br /><br />
-      <Text type={'p'} style={{ width: '100%', textAlign: 'center' }} className="color-dark-1 dark:color-light-1 bg-color-light-1-transparent dark:bg-color-dark-1-transparent">this site is a wip; projects and blog coming next</Text>
     </main>
   );
 }
