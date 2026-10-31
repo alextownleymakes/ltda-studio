@@ -37,6 +37,17 @@ const PROJECTS = [
       'Vercel',
     ],
   },
+  {
+    name: 'Nova Override',
+    href: '/games/nova-override',
+    image: '/projects/nova-override.jpg',
+    about: 'A space shooter for up to 8 pilots. Start the waves together and fight them across a map that wraps at its edges.',
+    tech: [
+      'HTML canvas, vanilla JavaScript, jQuery',
+      'Node.js WebSocket server on Railway',
+      'Vercel',
+    ],
+  },
 ];
 
 export default function Projects() {
