@@ -15,12 +15,27 @@ const PROJECTS = [
     href: 'https://versevsverse.app',
     image: '/projects/verse-vs-verse.jpg',
     about: 'A multiplayer freestyle rap battle game. Rap over a beat, land on the rhyming words, and battle your friends online.',
+    tech: [
+      'React, TypeScript, Vite, Material UI',
+      'Web Audio API, AudioWorklet, Tone.js, WebRTC',
+      'Node.js WebSocket server on Railway',
+      'Supabase: auth, Postgres, edge functions',
+      'Stripe and Apple in-app purchases',
+      'Twitch chat voting, PostHog analytics',
+      'Vercel web, Electron desktop, Capacitor iOS with AdMob',
+    ],
   },
   {
     name: 'Bubbles',
     href: '/games/bubbles',
     image: '/projects/bubbles.jpg',
     about: 'Pop bubbles alone or with up to 8 friends. Every bubble is simulated and drawn on your GPU.',
+    tech: [
+      'WebGPU with WGSL compute shaders',
+      'Vanilla JavaScript, no framework',
+      'Node.js WebSocket server on Railway',
+      'Vercel',
+    ],
   },
 ];
 
@@ -39,6 +54,9 @@ export default function Projects() {
                 {project.name} <span aria-hidden="true">&rarr;</span>
               </p>
               <p className={styles.about}>{project.about}</p>
+              <ul className={styles.tech} aria-label="Built with">
+                {project.tech.map((item) => <li key={item}>{item}</li>)}
+              </ul>
             </a>
           </li>
         ))}
